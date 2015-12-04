@@ -16,6 +16,10 @@
 		50A6734E1C0D369F0020CD50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A6734C1C0D369F0020CD50 /* LaunchScreen.storyboard */; };
 		50A673591C0D369F0020CD50 /* DataAttrDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A673581C0D369F0020CD50 /* DataAttrDemoTests.m */; };
 		50A673641C0D369F0020CD50 /* DataAttrDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A673631C0D369F0020CD50 /* DataAttrDemoUITests.m */; };
+		50A673731C0D38FE0020CD50 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A673721C0D38FE0020CD50 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		50A673761C0D392B0020CD50 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50A673751C0D392B0020CD50 /* PageViewController.m */; };
+		50A673781C0D39AD0020CD50 /* EebbkDA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A673771C0D39AD0020CD50 /* EebbkDA.framework */; };
+		50A6737A1C0D39C90020CD50 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A673791C0D39C90020CD50 /* libz.1.2.5.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,12 @@
 		50A6735F1C0D369F0020CD50 /* DataAttrDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataAttrDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A673631C0D369F0020CD50 /* DataAttrDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataAttrDemoUITests.m; sourceTree = "<group>"; };
 		50A673651C0D369F0020CD50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50A673711C0D38FE0020CD50 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		50A673721C0D38FE0020CD50 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		50A673741C0D392B0020CD50 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		50A673751C0D392B0020CD50 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		50A673771C0D39AD0020CD50 /* EebbkDA.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EebbkDA.framework; path = DataAttrDemo/EebbkDA.framework; sourceTree = "<group>"; };
+		50A673791C0D39C90020CD50 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50A6737A1C0D39C90020CD50 /* libz.1.2.5.tbd in Frameworks */,
+				50A673781C0D39AD0020CD50 /* EebbkDA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +95,8 @@
 		50A6732F1C0D369F0020CD50 = {
 			isa = PBXGroup;
 			children = (
+				50A673791C0D39C90020CD50 /* libz.1.2.5.tbd */,
+				50A673771C0D39AD0020CD50 /* EebbkDA.framework */,
 				50A6733A1C0D369F0020CD50 /* DataAttrDemo */,
 				50A673571C0D369F0020CD50 /* DataAttrDemoTests */,
 				50A673621C0D369F0020CD50 /* DataAttrDemoUITests */,
@@ -103,6 +117,10 @@
 		50A6733A1C0D369F0020CD50 /* DataAttrDemo */ = {
 			isa = PBXGroup;
 			children = (
+				50A673741C0D392B0020CD50 /* PageViewController.h */,
+				50A673751C0D392B0020CD50 /* PageViewController.m */,
+				50A673711C0D38FE0020CD50 /* JSONKit.h */,
+				50A673721C0D38FE0020CD50 /* JSONKit.m */,
 				50A6733E1C0D369F0020CD50 /* AppDelegate.h */,
 				50A6733F1C0D369F0020CD50 /* AppDelegate.m */,
 				50A673411C0D369F0020CD50 /* ViewController.h */,
@@ -277,6 +295,8 @@
 				50A673401C0D369F0020CD50 /* AppDelegate.m in Sources */,
 				50A6733D1C0D369F0020CD50 /* main.m in Sources */,
 				50A673491C0D369F0020CD50 /* DataAttrDemo.xcdatamodeld in Sources */,
+				50A673731C0D38FE0020CD50 /* JSONKit.m in Sources */,
+				50A673761C0D392B0020CD50 /* PageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +437,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DataAttrDemo",
+				);
 				INFOPLIST_FILE = DataAttrDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eebbk.studyos.DataAttrDemo;
@@ -428,6 +452,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DataAttrDemo",
+				);
 				INFOPLIST_FILE = DataAttrDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eebbk.studyos.DataAttrDemo;

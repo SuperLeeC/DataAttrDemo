@@ -1,0 +1,6 @@
+framework module EebbkDA {
+  umbrella header "EebbkDA.h"
+
+  export *
+  module * { export * }
+}

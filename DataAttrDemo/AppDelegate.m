@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <EebbkDA/BBKBigData.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
+	[BBKBigData unCaughtcrashException];
+	
+	//设置当前应用初始信息
+	[BBKBigData installWithAppId:@"xxxxxxxxxx" channel:nil];
+	
+	NSMutableDictionary *userInfo = [[NSMutableDictionary alloc] init];
+	
+	[userInfo setValue:@"id********" forKey:@"userId"];	//用户id
+	[userInfo setValue:@"张三" forKey:@"userName"];			//用户姓名
+	[userInfo setValue:@"1" forKey:@"sex"];					//用户性别 男/女
+	[userInfo setValue:@"2015-11-27" forKey:@"birthday"];	//用户生日信息 2015-11-27
+	[userInfo setValue:@"3" forKey:@"grade"];		//用户年龄
+	[userInfo setValue:@"0769****110" forKey:@"phoneNum"];	//联系方式
+	
+	[BBKBigData initUserInfoWithAttr:userInfo extend:@{@"喜好":@"看书，打球"}];
+	
 	return YES;
 }
 

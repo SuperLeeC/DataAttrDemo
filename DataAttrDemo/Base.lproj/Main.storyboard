@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bcJ-KQ-x9F">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="rVM-Gw-HsU">
+            <objects>
+                <navigationController id="bcJ-KQ-x9F" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YYJ-5h-gT3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="g5E-Uo-BVe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFY-wJ-xb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-168" y="-129"/>
+        </scene>
+        <!--测试-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController title="测试" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +32,109 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnU-YT-MIT">
+                                <rect key="frame" x="7" y="148" width="560" height="30"/>
+                                <state key="normal" title="计次事件"/>
+                                <connections>
+                                    <action selector="clickToAddCountEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yBZ-TE-nPa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMC-Kc-akv">
+                                <rect key="frame" x="7" y="110" width="560" height="30"/>
+                                <state key="normal" title="计数事件"/>
+                                <connections>
+                                    <action selector="clickToAddTimeEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YMV-Wr-jGx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0X-IT-g0o">
+                                <rect key="frame" x="7" y="186" width="560" height="30"/>
+                                <state key="normal" title="搜索事件"/>
+                                <connections>
+                                    <action selector="clickToAddSearchEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MTE-5B-Nev"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXe-QD-cXc">
+                                <rect key="frame" x="7" y="262" width="560" height="30"/>
+                                <state key="normal" title="Crash测试"/>
+                                <connections>
+                                    <action selector="clickToAddCrashEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KYC-vZ-BpS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTQ-KN-cfm">
+                                <rect key="frame" x="242" y="300" width="90" height="30"/>
+                                <state key="normal" title="页面跳转测试"/>
+                                <connections>
+                                    <action selector="clickToChangeView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zc3-gH-5xh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtX-I4-Eom">
+                                <rect key="frame" x="7" y="224" width="560" height="30"/>
+                                <state key="normal" title="自定义事件"/>
+                                <connections>
+                                    <action selector="clickToAddCustomEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M0W-cD-FLb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbE-yp-EDB">
+                                <rect key="frame" x="227" y="338" width="120" height="30"/>
+                                <state key="normal" title="手动触发上传数据"/>
+                                <connections>
+                                    <action selector="clickToTrigUpLoad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gf0-cg-RrU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qMC-Kc-akv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2I5-jt-JTD"/>
+                            <constraint firstItem="GXe-QD-cXc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Lw-Ub-DTI"/>
+                            <constraint firstItem="wbE-yp-EDB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8mY-d0-k36"/>
+                            <constraint firstItem="oTQ-KN-cfm" firstAttribute="leading" secondItem="GXe-QD-cXc" secondAttribute="leading" id="Eca-tx-MNb"/>
+                            <constraint firstItem="FnU-YT-MIT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lmc-of-qek"/>
+                            <constraint firstItem="W0X-IT-g0o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TxE-V6-D9Y"/>
+                            <constraint firstItem="TtX-I4-Eom" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xHm-kR-vEX"/>
+                            <constraint firstItem="oTQ-KN-cfm" firstAttribute="centerX" secondItem="GXe-QD-cXc" secondAttribute="centerX" id="zp3-jd-HQB"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="DATest" id="XpH-59-0s1">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="iIW-k0-h67"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="518" y="142"/>
+        </scene>
+        <!--页面跳转测试-->
+        <scene sceneID="4c5-xc-Otb">
+            <objects>
+                <viewController storyboardIdentifier="SecondPageTest" id="QNM-CL-38h" customClass="PageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vXN-Tb-Usv"/>
+                        <viewControllerLayoutGuide type="bottom" id="iRX-ht-v1U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yyr-85-srm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="测试页面跳转功能是否正常" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gK-SK-5uc">
+                                <rect key="frame" x="198" y="197" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8gK-SK-5uc" firstAttribute="centerY" secondItem="yyr-85-srm" secondAttribute="centerY" id="cu3-wg-PDL"/>
+                            <constraint firstItem="8gK-SK-5uc" firstAttribute="centerX" secondItem="yyr-85-srm" secondAttribute="centerX" id="lwc-FF-FBE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="页面跳转测试" id="6DM-GD-CYj">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="Lf7-wC-V1N"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fp4-K3-Qgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1302" y="142"/>
         </scene>
     </scenes>
 </document>
