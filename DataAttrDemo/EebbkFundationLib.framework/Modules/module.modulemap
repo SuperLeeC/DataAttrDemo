@@ -1,0 +1,6 @@
+framework module EebbkFundationLib {
+  umbrella header "EebbkFundationLib.h"
+
+  export *
+  module * { export * }
+}

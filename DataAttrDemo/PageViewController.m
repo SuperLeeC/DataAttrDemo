@@ -8,6 +8,7 @@
 
 #import "PageViewController.h"
 #import <EebbkDA/BBKBigData.h>
+#import <EebbkFundationLib/EebbkFundationLib.h>
 
 @implementation PageViewController
 
@@ -17,6 +18,7 @@
 //	[BBKBigData pageBegin:@"PageViewController"];
 	
 	[BBKBigData pageBegin:[NSString stringWithFormat:@"%@",[self class]]];
+	[EebbkFundationLib startLoading:self.view];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

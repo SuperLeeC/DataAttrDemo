@@ -16,6 +16,7 @@
 - (IBAction)clickToAddTimeEvent:(id)sender;
 - (IBAction)clickToAddSearchEvent:(id)sender;
 - (IBAction)clickToAddCustomEvent:(id)sender;
+- (IBAction)clickToSecondPage:(id)sender;
 - (IBAction)clickToAddCrashEvent:(id)sender;
 - (IBAction)clickToChangeView:(id)sender;
 - (IBAction)clickToTrigUpLoad:(id)sender;
@@ -46,17 +47,17 @@
 - (IBAction)clickToAddCountEvent:(id)sender {
 	
 	NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-	[dict setObject:@"计数事件测试" forKey:@"functionName"];
-	[dict setObject:@"测试一下点击按钮的功能" forKey:@"moduleDetail"];
+	[dict setObject:@"计次事件测试" forKey:@"functionName"];
+//	[dict setObject:@"测试一下点击按钮的功能" forKey:@"moduleDetail"];
 
 	[BBKBigData clickEventWithAttr:dict extend:nil];
 }
 
 - (IBAction)clickToAddTimeEvent:(id)sender {
 	NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-	[dict setObject:@"计数按钮点击" forKey:@"functionName"];
-	[dict setObject:@"测试一下计数按钮的功能" forKey:@"moduleDetail"];
-	[dict setObject:@"20000" forKey:@"trigValue"];//单位 （ms）
+//	[dict setObject:@"计数按钮点击" forKey:@"functionName"];
+//	[dict setObject:@"测试一下计数按钮的功能" forKey:@"moduleDetail"];
+//	[dict setObject:@"20000" forKey:@"trigValue"];//单位 （ms）
 	
 	[BBKBigData countEventWithDict:dict extend:nil];
 }
@@ -80,6 +81,9 @@
 	[dict setObject:@"触发值" forKey:@"trigValue"];
 	
 	[BBKBigData searchEventWithDict:dict extend:@{@"user":@"LIJUN"}];}
+
+- (IBAction)clickToSecondPage:(id)sender {
+}
 
 - (IBAction)clickToAddCrashEvent:(id)sender {
 	[self performSelector:@selector(nonFunctionSoCrash:) withObject:@"异常测试"];

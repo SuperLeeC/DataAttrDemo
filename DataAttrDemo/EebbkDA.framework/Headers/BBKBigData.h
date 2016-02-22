@@ -69,7 +69,20 @@
  *  @param attr 用户信息列表
  *  @param extend 其他信息
  */
-+ (void) initUserInfoWithAttr:(NSMutableDictionary *)attr extend:(NSDictionary *)extend;
+/*
+ *	Example:
+ NSMutableDictionary *userInfo = [[NSMutableDictionary alloc] init];
+	
+	[userInfo setValue:@"id********" forKey:@"userId"];		//用户id
+	[userInfo setValue:@"张三" forKey:@"userName"];			//用户姓名
+	[userInfo setValue:@"1" forKey:@"sex"];					//用户性别 男/女
+	[userInfo setValue:@"2015-11-27" forKey:@"birthday"];	//用户生日信息 2015-11-27
+	[userInfo setValue:@"3" forKey:@"grade"];				//用户年龄
+	[userInfo setValue:@"0769****110" forKey:@"phoneNum"];	//联系方式
+ 
+ *
+ */
++ (void) initUserInfoWithAttr:(NSDictionary *)attr extend:(NSDictionary *)extend;
 
 
 #pragma -mark 设置事件信息
@@ -80,7 +93,7 @@
  *  @param event 大数据信息列表
  *	@param extend	额外的信息
  */
-+ (void) clickEventWithAttr:(NSMutableDictionary *)event extend:(NSDictionary *)extend;
++ (void) clickEventWithAttr:(NSDictionary *)event extend:(NSDictionary *)extend;
 
 
 /**
@@ -89,7 +102,7 @@
  *  @param eventDict 大数据信息列表
  *	@param extend	额外信息
  */
-+ (void)countEventWithDict:(NSMutableDictionary *)eventDict extend:(NSDictionary *)extend;
++ (void)countEventWithDict:(NSDictionary *)eventDict extend:(NSDictionary *)extend;
 
 /**
  *  搜索事件 大数据信息采集
@@ -97,7 +110,7 @@
  *  @param eventDict 搜索事件信息列表
  *	@param extend	额外的信息
  */
-+ (void) searchEventWithDict:(NSMutableDictionary *)eventDict extend:(NSDictionary *)extend;
++ (void) searchEventWithDict:(NSDictionary *)eventDict extend:(NSDictionary *)extend;
 
 /**
  *  自定义事件
@@ -105,7 +118,7 @@
  *  @param attr   自定义时间相关参数列表
  *  @param extend 额外信息
  */
-+ (void) customEventWithAttr:(NSMutableDictionary *)attr extend:(NSDictionary *)extend;
++ (void) customEventWithAttr:(NSDictionary *)attr extend:(NSDictionary *)extend;
 
 /**
  *  uRL监控
@@ -143,5 +156,22 @@
  *	如果应用内需要手动上传时，如收到推送信息上传数据，可以手动触发数据上传
  */
 + (void) triggerToUploadEvent;
+
+
+#pragma -mark 设置当前App版本号
+/**
+ *  设置当前App版本号
+ *
+ *  @param version 版本号	 设置当前App版本号
+ *				如果不设置或者设置为0000,则会自动调用系统获取当前App真实版本号
+ */
++ (void) setAppVersion:(NSString *)version;
+
+/**
+ *  设置DA服务器打开开关
+ *
+ *  @param flag 是否需要上传
+ */
++ (void)setDAServiceOpenFlag:(BOOL)flag;
 
 @end
